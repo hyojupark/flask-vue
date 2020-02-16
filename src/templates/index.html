@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='3rd-party/bootstrap/css/bootstrap.min.css') }}">
+
+    <script type="text/javascript" src="{{ url_for('static', filename='3rd-party/jquery/js/jquery-3.3.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='3rd-party/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='3rd-party/vue/js/vue.js') }}"></script>
+{#    <script src=“https://unpkg.com/vue@2.3.2”></script>#}
+
+</head>
+<body>
+    <div id="app">
+        [[ message ]]
+    </div>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            },
+            delimiters: ['[[', ']]']
+        })
+    </script>
+</body>
+</html>
